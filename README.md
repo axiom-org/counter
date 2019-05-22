@@ -23,6 +23,6 @@ To deploy your application onto Axiom, you have to upload the
 `build` folder to a decentralized bucket. First, allocate
 a bucket according to XXX. Then run:
 
-### `axiom upload build <>`
+### `axiom upload build <your-bucket-name>`
 
 You can check it out by XXX
