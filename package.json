@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://counter.axiom/",
   "dependencies": {
-    "axiom-api": "0.0.8",
+    "axiom-api": "0.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
