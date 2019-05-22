@@ -2,6 +2,7 @@
   "name": "counter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://counter.axiom/",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
