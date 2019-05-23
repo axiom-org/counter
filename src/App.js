@@ -59,7 +59,7 @@ export default class App extends React.Component {
 
   async increment() {
     this.setState({
-      loadingMessage: `counting to ${this.state.counter + 1}...`
+      loadingMessage: `saving counter = ${this.state.counter + 1}...`
     });
     this.state.bucket.setJSON("counter.json", {
       counter: this.state.counter + 1
