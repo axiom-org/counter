@@ -31,9 +31,9 @@ export default class App extends React.Component {
 
     let bucket = await this.axiom.getBucket("counter", this.state.publicKey);
     if (bucket) {
-      console.log("XXX got bucket:", bucket);
+      console.log("got bucket:", bucket);
       let data = await bucket.getJSON("counter.json");
-      console.log("XXX got data:", data);
+      console.log("got data:", data);
       let counter = data ? data.counter : 0;
       this.setState({
         bucket: bucket,
@@ -41,7 +41,7 @@ export default class App extends React.Component {
         loadingMessage: null
       });
     } else {
-      console.log("XXX failed to get bucket");
+      console.log("failed to get bucket");
       this.setState({
         loadingMessage: null
       });
@@ -52,7 +52,7 @@ export default class App extends React.Component {
     this.setState({
       loadingMessage: "creating a bucket..."
     });
-    console.log("XXX creating a bucket");
+    console.log("creating a bucket");
     await this.axiom.createBucket("counter", this.state.publicKey, 1);
     await this.login();
   }
@@ -64,10 +64,14 @@ export default class App extends React.Component {
     this.state.bucket.setJSON("counter.json", {
       counter: this.state.counter + 1
     });
-    console.log("XXX uploading...");
+    console.log("uploading...");
     await this.state.bucket.upload();
-    console.log("XXX upload complete");
-    this.setState({ waiting: false, counter: this.state.counter + 1 });
+    console.log("upload complete");
+    this.setState({
+      waiting: false,
+      loadingMessage: null,
+      counter: this.state.counter + 1
+    });
   }
 
   render() {
