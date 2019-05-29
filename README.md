@@ -11,7 +11,7 @@ To develop your app locally, you can run:
 
 ### `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:2000](http://localhost:2000) to view it in the browser.
 
 To bundle your application into static files, run:
 
